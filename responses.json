@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1712690999794,
+    "timestamp": "2024-04-09T19:29:59.794Z",
+    "answers": {
+      "like": "3",
+      "game": "Dobrodružné",
+      "play": "Méně než 2 hodiny týdně.",
+      "favDevice": "PC",
+      "favGame": "minecraft"
+    }
+  },
+  {
+    "id": 1712691018438,
+    "timestamp": "2024-04-09T19:30:18.438Z",
+    "answers": {
+      "like": "1",
+      "game": "Střílečky",
+      "play": "4-6 hodin týdně.",
+      "favDevice": "Xbox",
+      "favGame": "GTA 5"
+    }
+  },
+  {
+    "id": 1712691034341,
+    "timestamp": "2024-04-09T19:30:34.341Z",
+    "answers": {
+      "like": "3",
+      "game": "Dobrodružné",
+      "play": "Méně než 2 hodiny týdně.",
+      "favDevice": "Nintendo switch",
+      "favGame": "Zelda"
+    }
+  },
+  {
+    "id": 1712691150688,
+    "timestamp": "2024-04-09T19:32:30.688Z",
+    "answers": {
+      "like": "2",
+      "game": "Sportovní",
+      "play": "4-6 hodin týdně.",
+      "favDevice": "Playstation",
+      "favGame": "fifa"
+    }
+  },
+  {
+    "id": 1712691252402,
+    "timestamp": "2024-04-09T19:34:12.402Z",
+    "answers": {
+      "like": "5",
+      "game": "Simulátory",
+      "play": "6-8 hodin týdně.",
+      "favDevice": "PC",
+      "favGame": "F1 23"
+    }
+  }
+]

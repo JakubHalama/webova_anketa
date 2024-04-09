@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webová anketa</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <h2>Anketa o videohrách</h2>
+    <form action="/submit" method="post" class="form-container" id="anketaForm"> 
+        <div>
+            <label for="like" class="bold">Jak moc máte rád/a videohry(1=vůbec hry nehraju,5=hry hraju velmi rád).</label>
+            <input type="number" step="1" min="0" max="5" id="like" name="like" required> 
+        </div>
+        <div>
+            <label for="game" class="bold">Zvolte váš oblíbený žánr videohry:</label>
+            <select id="game" name="game" required> 
+                <option value="Simulátory">Simulátory</option>
+                <option value="Strategické">Strategické</option>
+                <option value="Střílečky">Střílečky</option>
+                <option value="Sportovní">Sportovní</option>
+                <option value="Dobrodružné">Dobrodružné</option>
+            </select>
+        </div>
+        <div>
+            <label for="play" class="bold">Jak často hrajete videohry?</label>
+            <select id="play" name="play" required>
+                <option value="">Vyberte...</option> 
+                <option value="Vůbec nehraju.">Vůbec nehraju.</option>
+                <option value="Méně než 2 hodiny týdně.">Méně než 2 hodiny týdně.</option>
+                <option value="2-4 hodiny týdně.">2-4 hodiny týdně.</option>
+                <option value="4-6 hodin týdně.">4-6 hodin týdně.</option>
+                <option value="6-8 hodin týdně.">6-8 hodin týdně.</option>
+                <option value="Více než 10 hodin týdně.">Více než 10 hodin týdně.</option>
+            </select>
+        </div>
+        <div>
+            <label for="favDevice" class="bold">Zvolte na čem hrajete nejraději:</label>
+            <select id="favDevice" name="favDevice" required> 
+                <option value="">Vyberte...</option> 
+                <option value="PC">PC</option>
+                <option value="Xbox">Xbox</option>
+                <option value="Playstation">Playstation</option>
+                <option value="Nintendo switch">Nintendo switch</option>
+            </select>
+        </div>
+        <div>
+            <label for="favGame" class="bold">Napište vaší oblíbenou videohru:</label>
+            <input type="text" id="favGame" name="favGame" required> 
+        </div>
+        <button type="submit" class="submit-btn">Odeslat odpovědi</button>
+    </form>
+
+    <script>
+        // JavaScript pro validaci formuláře
+        document.getElementById('anketaForm').addEventListener('submit', function(event) { // Při odeslání formuláře
+            const inputs = document.querySelectorAll('input, select'); // Vybrat všechna vstupní pole a rozbalovací seznamy
+            let isValid = true; // Předpokládejte, že formulář je platný
+
+            inputs.forEach(function(input) { // Pro každý prvek
+                if (!input.value) { // Pokud hodnota není vyplněna
+                    isValid = false; // Nastavit, že formulář není platný
+                    input.classList.add('invalid'); // Přidat třídu pro zvýraznění neplatného pole
+                } else { // Jinak
+                    input.classList.remove('invalid'); // Odstranit třídu pro zvýraznění neplatného pole
+                }
+            });
+
+            if (!isValid) { // Pokud formulář není platný
+                event.preventDefault(); // Zabránit odeslání formuláře
+                alert('Prosím vyplňte všechny povinné položky.'); // Upozornit uživatele, aby vyplnil všechny povinné položky
+            }
+        });
+    </script>
+</body>
+</html>
